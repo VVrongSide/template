@@ -8,37 +8,13 @@ In order to follow this guide, the reader is expected to have a basic understand
 
 ## Table of Contents
 
-1. database_framework.py
-2. Install and setup of MariaDB.
-3. Login to MariaDB and create a database.
+1. Install and setup of MariaDB.
+2. Login to MariaDB and create a database.
+3. database_framework.py
 
 
-# 1. database_framework.py
 
-The file 'database_framework.py' contains the basic setup for initializing a database object.
-This object can then be used to perform basic SQL operations.
-
-The main program:
-Create a 'movie' table with four attributes:   
-
-|id        | title         | release_year  	| genre   |
-| -------- | ------------- | -------------- | ------- |
-| INT AUTO INCREMENT | VARCHAR | YEAR       | VARCHAR |
-
-Next up two movies are inserted which will make the database contain the following: 
-
-|  id   | title  | release_year  	| genre  |
-| -------- | ------------- | -------- | --- |
-|  1  | Deadpool     |   2016   |   Action         |
-|  2  | The Batman   |   2022   |  Action/Adventure|
-
-Then the genre attribute for 'Deadpool' is updated:
-'Action' -> 'Action/Adventure'
-
-Before and after this update a print statement display the first row to show the update.  
-
-
-# 2. Install and setup of MariaDB
+# 1. Install and setup of MariaDB
 
 Open a terminal on the laptop you which to run your database.
 
@@ -85,7 +61,7 @@ $ dpkg -l | grep mariadb-server
 ```
 This will display all packages installed containing the name 'mariadb-server'.
 
-# 3. Login to MariaDB and create a database.
+# 2. Login to MariaDB and create a database.
 
 If everything in step 1 'Install and setup of MariaDB' continue with this section.
 
@@ -122,10 +98,37 @@ Notice how MariaDB [(none)]> changes to MariaDB [database_name]>
 From here on your new database is set and ready to go.
 Try run the database_framework.py file. If any errors occurs, go back and check you did every step as described in this README file. 
 
+
+# 3. database_framework.py
+
+The file 'database_framework.py' contains the basic setup for initializing a database object.
+This object can then be used to perform basic SQL operations.
+
+The main program:
+Create a 'movie' table with four attributes:   
+
+|id        | title         | release_year  	| genre   |
+| -------- | ------------- | -------------- | ------- |
+| INT AUTO INCREMENT | VARCHAR | YEAR       | VARCHAR |
+
+Next up two movies are inserted which will make the database contain the following: 
+
+|  id   | title  | release_year  	| genre  |
+| -------- | ------------- | -------- | --- |
+|  1  | Deadpool     |   2016   |   Action         |
+|  2  | The Batman   |   2022   |  Action/Adventure|
+
+Then the genre attribute for 'Deadpool' is updated:
+'Action' -> 'Action/Adventure'
+
+Before and after this update a print statement display the first row to show the update. 
+
 If the program terminate without any errors you should see the following statement in the terminal:
 ```
 (1, 'Deadpool', 2016, 'Action')
 (1, 'Deadpool', 2016, 'Action/Fantasy')  
 ```
 
-Hope this was helpful and enjoy! 
+Hope this was helpful and enjoy!
+
+
