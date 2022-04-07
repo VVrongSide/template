@@ -1,7 +1,7 @@
 ###################################################################################
-# This database framework was created by Anders Holm (DK).                        #
+# This database template was created by Anders Holm (DK).                        #
 #                                                                                 #  
-# The framework is based on the database already created before running the       #
+# The template is based on the database already created before running the       #
 # program.                                                                        #
 # Read the README.md to get this settled. It will guide you through the           #
 # installation and setup.                                                         #
@@ -72,6 +72,7 @@ if __name__ == '__main__':
     # Commit first and second insert in the database 'movie'.
     db.connection.commit()
     
+
     # Select element in the row where id = 1 and prints it. 
     db.cursor.execute("SELECT * FROM movie WHERE id = 1")
     result = db.cursor.fetchall()

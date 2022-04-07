@@ -1,7 +1,7 @@
-# Database Framework
+# Database template
 
 
-This database framework is made for a Linux distro and so is the rest of the guide. 
+This database template is made for a Linux distro and so is the rest of the guide. 
 It was last tested on a laptop with 20.04.1-Ubuntu on 25-03-2022, where it is confirmed that everything worked.
 
 In order to follow this guide, the reader is expected to have a basic understanding of SQL syntax and Linux usage.
@@ -10,7 +10,7 @@ In order to follow this guide, the reader is expected to have a basic understand
 
 1. Install and setup of MariaDB.
 2. Login to MariaDB and create a database.
-3. database_framework.py
+3. database_template.py
 
 
 
@@ -70,7 +70,7 @@ Open a terminal on the laptop you installed MariaDB and type the following:
 $ mysql -u root -p
 ```
 Type in the password for the root user you made during the configuration of MariaDB.
-#NOTE: Replace your root password with the 'new_password' string in the database_framework.py file. The program needs this password to access MariaDB on your laptop.
+#NOTE: Replace your root password with the 'new_password' string in the database_template.py file. The program needs this password to access MariaDB on your laptop.
 
 The terminal should now display: 
 MariaDB [(none)]> 
@@ -81,7 +81,7 @@ Now we want to create our database by typing:
 CREATE DATABASE <database_name>;
 ```
 SQL syntax requires all commands end with a ';'
-#NOTE Replace the 'new_database' string in the database_framework.py file with the name of your database. MariaDB needs to know which specific database it accesses since you could have several.
+#NOTE Replace the 'new_database' string in the database_template.py file with the name of your database. MariaDB needs to know which specific database it accesses since you could have several.
 
 To verify your database has been created type:
 ```
@@ -96,12 +96,12 @@ USE <database_name>;
 Notice how MariaDB [(none)]> changes to MariaDB [database_name]> 
 
 From here on your new database is set and ready to go.
-Try run the database_framework.py file. If any errors occurs, go back and check you did every step as described in this README file. 
+Try run the database_template.py file. If any errors occurs, go back and check you did every step as described in this README file. 
 
 
-# 3. database_framework.py
+# 3. database_template.py
 
-The file 'database_framework.py' contains the basic setup for initializing a database object.
+The file 'database_template.py' contains the basic setup for initializing a database object.
 This object can then be used to perform basic SQL operations.
 
 The main program:
